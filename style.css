@@ -56,8 +56,8 @@
 .project-img {
   transition: transform 0.4s ease-in-out;
   max-width: 100%;
-  max-height: 35vh; /* អ្នកអាចកំណត់តម្លៃ max-height ដោយប្ដូរតាមត្រូវការ */
-  object-fit: cover; /* ធ្វើឲ្យរូបភាពកាត់តាមផ្ទៃការផ្សាយ */
+  max-height: 35vh;
+  object-fit: cover;
 }
 
 .project-item:hover .project-img {
