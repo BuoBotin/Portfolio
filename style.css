@@ -1,0 +1,229 @@
+
+/* Base styles */
+.navbar-custom {
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+.hero-section {
+  margin-top: -80px;
+  min-height: 100vh;
+  padding: 120px 0 60px;
+}
+
+.hero-font-size {
+  font-size: clamp(32px, 5vw, 60px);
+}
+
+.hero-font-size2 {
+  font-size: clamp(28px, 4vw, 50px);
+}
+
+.hero-p {
+  font-size: clamp(14px, 2vw, 18px);
+  max-width: 800px;
+}
+
+.scrolling-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 50%;
+}
+/* Additional colors */
+.bg-purple {
+  background-color: #6f42c1;
+} /* Purple */
+.bg-teal {
+  background-color: #20c997;
+} /* Teal */
+
+.hover-overlay:hover {
+  opacity: 1 !important;
+}
+
+/* Custom CSS  */
+.project-item {
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.4s ease-in-out;
+  position: relative;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-img {
+  transition: transform 0.4s ease-in-out;
+  max-width: 100%;
+  max-height: 35vh; /* អ្នកអាចកំណត់តម្លៃ max-height ដោយប្ដូរតាមត្រូវការ */
+  object-fit: cover; /* ធ្វើឲ្យរូបភាពកាត់តាមផ្ទៃការផ្សាយ */
+}
+
+.project-item:hover .project-img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  background: rgba(220, 53, 69, 0.8); /* Bootstrap danger color */
+  color: white;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.project-item:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes scrollEffect {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .hero-section {
+    padding-top: 100px;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .navbar-custom {
+    padding: 0.5rem 0;
+  }
+
+  .hero-section {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .custom-margin {
+    margin-top: 60px;
+  }
+
+  .scrolling-image {
+    max-width: 400px;
+    margin: 40px auto 0;
+  }
+
+  /* Adjust sections height */
+  #about,
+  #projects {
+    height: auto !important;
+    min-height: 100vh;
+    width: 90% !important;
+  }
+
+  .project-img {
+    max-height: 250px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .hero-section {
+    margin: 60px 0 0;
+    padding: 20px;
+  }
+
+  .custom-margin {
+    margin-top: 40px;
+  }
+
+  .scrolling-image {
+    max-width: 300px;
+    margin: 30px auto 0;
+  }
+
+  /* Adjust spacing for about section */
+  #about .row {
+    gap: 2rem;
+  }
+
+  /* Adjust project grid */
+  .project-item {
+    margin-bottom: 20px;
+  }
+
+  .project-img {
+    max-height: 200px;
+  }
+
+  /* Contact section adjustments */
+  .contact-info {
+    margin-bottom: 30px;
+  }
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 1.5rem !important;
+  }
+
+  .hero-section {
+    padding-top: 80px;
+  }
+
+  .hero-description {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-description .btn {
+    width: 100%;
+  }
+
+  .scrolling-image {
+    max-width: 250px;
+  }
+
+  /* Adjust social icons spacing */
+  .d-flex.fs-2.gap-4 {
+    gap: 1rem !important;
+  }
+
+  /* Footer adjustments */
+  footer .col-12 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+/* Fix for very small devices */
+@media (max-width: 320px) {
+  .hero-font-size {
+    font-size: 28px;
+  }
+
+  .hero-font-size2 {
+    font-size: 24px;
+  }
+
+  .scrolling-image {
+    max-width: 200px;
+  }
+}
+
+/* Dark mode adjustments */
+[data-bs-theme="dark"] .navbar-custom {
+  background-color: rgba(33, 37, 41, 0.95);
+}
+
+[data-bs-theme="light"] .navbar-custom {
+  background-color: rgba(255, 255, 255, 0.95);
+}
